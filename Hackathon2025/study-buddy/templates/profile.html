@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Profile - Study Buddy</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        .profile-card {
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+        h2 {
+            color: #4CAF50;
+        }
+        .info-row {
+            margin: 10px 0;
+        }
+        .label {
+            font-weight: bold;
+            color: #555;
+        }
+        a {
+            display: inline-block;
+            margin: 10px 10px 10px 0;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+        a:hover {
+            background-color: #45a049;
+        }
+        .logout {
+            background-color: #f44336;
+        }
+        .logout:hover {
+            background-color: #da190b;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome, {{ user.name }}! 👋</h1>
+    
+    <div class="profile-card">
+        <h2>Your Profile</h2>
+        
+        <div class="info-row">
+            <span class="label">Email:</span> {{ user.email }}
+        </div>
+        
+        <div class="info-row">
+            <span class="label">Year:</span> {{ user.year }}
+        </div>
+        
+        <div class="info-row">
+            <span class="label">Major:</span> {{ user.major }}
+        </div>
+        
+        <div class="info-row">
+            <span class="label">Courses:</span> {{ user.courses|join(', ') }}
+        </div>
+        
+        <div class="info-row">
+            <span class="label">Study Times:</span> {{ user.study_times|join(', ') }}
+        </div>
+        
+        <div class="info-row">
+            <span class="label">Study Style:</span> {{ user.study_style }}
+        </div>
+        
+        <div class="info-row">
+            <span class="label">Noise Preference:</span> {{ user.noise_preference }}
+        </div>
+        
+        {% if user.bio %}
+        <div class="info-row">
+            <span class="label">Bio:</span> {{ user.bio }}
+        </div>
+        {% endif %}
+    </div>
+    
+    <br>
+    <a href="/">Home</a>
+    <a href="/logout" class="logout">Logout</a>
+</body>
+</html>
