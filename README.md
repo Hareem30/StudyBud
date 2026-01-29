@@ -1,5 +1,9 @@
 # 📚 StudyBuddy
 
+## Project Status
+This project is currently a work in progress.  
+Core functionality has been implemented, with additional features planned.
+
 ## Overview
 StudyBuddy is a student-matching application designed to connect users with compatible study partners based on shared subjects, availability, and learning goals.  
 The project focuses on **similarity scoring, testing, and basic front-end presentation**, demonstrating structured problem-solving and data-driven matching logic.
